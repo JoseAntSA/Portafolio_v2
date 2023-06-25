@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500&display=swap');
+
+/* Body -------------------- */
+body {
+    background-color: #040404;
+    font-family: "Work Sans";
+    color: #fff;
+}
+body::before {
+    content: "";                        
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background: url("../img/bg_Zelda.gif");
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Header -------------------- */
+#header *{
+    transition: ease-in-out 0.3s;
+    box-sizing: border-box;
+}
+#header{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 1;
+}
+#header .box-header{
+    width: 70%;
+}
+#header .photo-me{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#header .photo-me img{
+    width: 25%;
+    border-radius: 50% 0 50% 50%;
+    border: 4px solid #1CB698;
+}
+#header .me{
+    background: rgba(0, 0, 0, 0.7);
+    display: block;
+    padding: 20px;
+}
+#header h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#header h1 a, #header h1 a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+#header h2{
+    font-size: 24px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+}
+#header h2 span{
+    border-bottom: 2px solid #1CB698;
+    padding-bottom: 2px;
+}
+
+/* Header Top -------------------- */
+#header.header-top .photo-me, #header.header-top .redes, .header-top h2{
+    display: none;
+}
+#header.header-top{
+    height: 90px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+}
+#header.header-top .box-header{
+    width: 85%;
+}
+#header.header-top .me{
+    padding: 0;
+    background: none;
+}
+#header.header-top h1{
+    font-size: 25px;
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+#header.header-top .menu ul{
+    justify-content: left;
+    gap: 35px;
+    margin-top: 0px;
+}
+#header.header-top .menu a, #header.header-top .menu a:focus {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* Navegacion Computadora -------------------- */
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+.menu a, .menu a:focus {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    padding-bottom: 3px;
+    transition: all;
+}
+.menu a:hover{
+    border-bottom: 2px solid #1CB698;
+}
+.menu .active, .menu .active:focus, .menu-mobile .active, .menu-mobile .active:focus{
+    color: #fff;
+    border-bottom: 2px solid #1CB698;
+    padding-bottom: 3px;
+    transition: 0.5s;
+}
+
+/* Navegacion Movil -------------------- */
+.icon-menu i{
+    color: #fff;
+    font-size: 25px;
+}.icon-menu{
+    cursor: pointer;
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    line-height: 0;
+    z-index: 3;
+}
+#header .menu-mobile{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+}
+#header .menu-mobile ul{
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding-left: 15px;
+    padding-top: 15px;
+    overflow-y: hidden;
+    transition: 0.3s;
+}
+#header .menu-mobile li{
+    margin-bottom: 15px;
+}
+
+/* Vinculos de Redes -------------------- */
+.redes{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    gap: 30px;
+}
+.icon-red{
+    text-decoration: none;
+    display: flex;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    font-size: 27px;
+    background-color: rgba(0, 0, 0, 0.6);
+    outline: 2px solid rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    transition-property: all;
+	transition-duration: 0.25s;
+}
+.icon-red i{
+    margin: auto;
+}
+.icon-red:hover i {
+	animation: shake 0.45s;
+}
+.icon-github:hover {
+	background-color:#3a4752;
+	outline-color: #3a4752;
+}
+.icon-gmail:hover {
+	background-color: #F14336;
+	outline-color: #F14336;
+}
+.icon-whatsApp:hover {
+	background-color: #2ea44f;
+	outline-color: #2ea44f;
+}
+.icon-linkedin:hover {
+	background-color: #0077b5;
+	outline-color: #0077b5;
+}
+@keyframes shake {
+	10% {
+		transform: rotate(15deg);
+	}
+	20% {
+		transform: rotate(-15deg);
+	}
+	30% {
+		transform: rotate(15deg);
+	}
+	40% {
+		transform: rotate(-15deg);
+	}
+}
+
+/* Main -------------------- */
+main{
+    display: flex;
+    justify-content: center;
+    overflow-wrap: break-word;
+}
+
+/* Section -------------------- */
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    position: absolute;
+    width: 85%;
+    max-width: 85%;
+    top: 140px;
+    bottom: 100%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: ease-in-out 0.4s;
+    overflow: hidden;
+    z-index: -1;
+}
+section.section-show{
+    top: 110px;
+    bottom: auto;
+    opacity: 1;
+}
+section .info-section{
+    width: 90%;
+}
+section .info-section h1{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 30px;    
+    margin-bottom: 40px;
+}
+section .info-section h1 span{
+    padding-bottom: 5px;
+    padding: 0 20px;
+    border-bottom: 2px solid #1CB698;
+}
+section .info-section h2{
+    width: 100%;
+    font-size: 17px;
+    text-align: center;
+}
+section .content-section{
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+/* Seccion Sobre Mi -------------------- */
+#about-me .content-section > span{
+    color: #1CB698;
+}
+#about-me .content-section > p{
+    margin-bottom: 20px;
+    text-align: justify;
+}
+#about-me .info-hobbies{
+    display: flex;
+}
+#about-me .info-hobbies h2{
+    color: #1CB698;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+#about-me .personal-info{
+    width: 50%;
+}
+#about-me .personal-info li{
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#about-me .personal-info li p span{
+    padding: 0 15px 0 0;
+    border-bottom: 2px solid #1CB698;
+}
+#about-me .hobbies{
+    width: 60%;
+}
+#about-me .hobbies h2{
+    text-align: center;
+}
+
+#about-me .hobbies .caja-hobbies{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px,1fr));
+    gap: 50px;
+}
+#about-me .hobbies .icon-hobbie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    gap: 15px;
+}
+#about-me .hobbies i{
+    font-size: 40px;
+}
+
+
+/* Parte Responsive -------------------- */
+@media (width <= 767px){
+    #header .box-header{
+        width: 90%;
+    }
+    #header h1{
+        font-size: 34px;
+    }
+    #header h2{
+        font-size: 19px;
+    }
+    #header .photo-me img{
+        width: 50%;
+    }
+    #header.header-top{
+        height: 60px;
+    }
+    #header.header-top h1{
+        font-size: 20px;
+        margin-top: 10px;
+        visibility: hidden;
+        transition: 0s;
+    }
+    #header.header-top h1::before{
+        content: "José Antonio SA";
+        visibility: visible;
+    }
+    section{
+        top: 110px;
+    }
+    section.section-show{
+        top: 90px;
+    }
+    .menu ul{
+        display: none;
+    }
+    #about-me .info-hobbies{
+        display: block;
+    }
+    #about-me .personal-info{
+        width: 100%;
+        min-width: 100%;
+    }
+    #about-me .hobbies{
+        margin-top: 30px;
+    }
+    #about-me .info-hobbies h2{
+        text-align: center;
+    }
+    #about-me .personal-info li{
+        display: block;
+        margin-bottom: 13px;
+    }
+    #about-me .personal-info li p{
+        margin-bottom: 8px;
+    } 
+    #about-me .hobbies{
+        width: 100%;
+    }
+    #about-me .hobbies .caja-hobbies{
+        gap: 40px;
+        margin-top: 30px;
+    }
+    
+}
+@media (768px <= width <= 1023px){
+    #header .box-header{
+        width: 85%;
+    }
+    #header h1{
+        font-size: 38px;
+    }
+    #header .photo-me img{
+        width: 40%;
+    }
+    .menu ul{
+        gap: 25px;
+    }
+    #header .icon-menu{
+        display: none;
+    }
+    #about-me .personal-info{
+        width: 60%;
+        min-width: 60%;
+    }
+    #about-me .personal-info li{
+        display: block;
+        margin-bottom: 13px;
+    }
+    #about-me .personal-info li p{
+        margin-bottom: 8px;
+    } 
+    #about-me .hobbies{
+        width: 40;
+    }
+
+}
+@media (1024px <= width) {  
+    #header .icon-menu{
+        display: none;
+    } 
+}
+
