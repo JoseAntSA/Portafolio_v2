@@ -1,6 +1,6 @@
 window.onload = function() {
   clickIconMenu();
-  enableLink();
+  enableLink(); 
 }
 
 function showMenu(){
