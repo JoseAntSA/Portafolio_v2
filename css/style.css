@@ -65,6 +65,9 @@ body::before {
 #header h1 a:first-child {
     display: none;
 }
+#header h1 a:last-child {
+    display: block;
+}
 #header h2{
     font-size: 24px;
     text-align: center;
@@ -281,6 +284,7 @@ section .content-section h2{
     width: 100%;
     font-size: 17px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 /* Seccion Sobre Mi -------------------- */
@@ -297,7 +301,6 @@ section .content-section h2{
 .info-hobbies h2{
     color: #1CB698;
     font-weight: bolder;
-    margin-bottom: 15px;
 }
 .personal-info{
     width: 50%;
@@ -341,9 +344,6 @@ section .content-section h2{
 .soft-skills ul li{
     margin-bottom: 10px;
 }
-#skills h2{
-    margin-bottom: 30px;
-}
 .hard-skills, .soft-skills{
     display: flex;
     justify-content: center;
@@ -378,7 +378,6 @@ section .content-section h2{
 
 /* Seccion Formaciones -------------------- */
 .box-edu{
-    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
@@ -407,6 +406,71 @@ section .content-section h2{
     font-weight: bold;
     color: #1CB698;
 }
+
+/* Seccion Tecnologias -------------------- */
+.carousel{
+    margin: 0 auto;
+}
+.box-carousel{
+    display: flex;
+    align-items: center;
+}
+.carousel-elemento{
+    text-align: center;
+    background: rgba(255,255,255,.06);
+    margin: 0 12px;
+    transition: all 0.3s;
+}
+.carousel-elemento:hover{
+    background: rgba(0,0,0,0.3);
+    
+}
+.carousel-elemento .caja-icon{
+    margin: 30px auto;
+    margin-bottom: 20px;
+    width: 64px;
+    height: 64px;
+    background: #1CB698;
+    border-radius: 5px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -9px -8px 0px 0px  rgba(255,255,255,0.15);
+}
+.carousel-elemento i{
+    font-size: 30px;
+}
+.carousel-elemento h3{
+    font-size: 20px;
+}
+.carousel-elemento p{
+    box-sizing: border-box;
+    padding: 0 20px 20px 20px;
+    margin-top: 20px;
+    text-align: justify;
+    line-height: 19px;
+    font-size: 14px;
+}
+.carousel-prev, .carousel-next{
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    opacity: 50%;
+}
+.carousel-prev:hover, .carousel-next:hover{
+    opacity: 100%;
+}
+.carousel-indicadores .glider-dot{
+    opacity: .3;
+}
+.carousel-indicadores .glider-dot:hover{
+    opacity: 1;
+}
+
 /* Parte Responsive -------------------- */
 @media (width <= 767px){
     #header .box-header{
