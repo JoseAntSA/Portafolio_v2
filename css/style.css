@@ -258,28 +258,25 @@ section.section-show{
     bottom: auto;
     opacity: 1;
 }
-section .info-section{
+section .content-section{
     width: 90%;
+    margin-bottom: 20px;
 }
-section .info-section h1{
+section .content-section h1{
     font-size: 25px;
     text-align: center;
     margin-top: 30px;    
     margin-bottom: 40px;
 }
-section .info-section h1 span{
+section .content-section h1 span{
     padding-bottom: 5px;
     padding: 0 20px;
     border-bottom: 2px solid #1CB698;
 }
-section .info-section h2{
+section .content-section h2{
     width: 100%;
     font-size: 17px;
     text-align: center;
-}
-section .content-section{
-    width: 90%;
-    margin-bottom: 30px;
 }
 
 /* Seccion Sobre Mi -------------------- */
@@ -290,50 +287,91 @@ section .content-section{
     margin-bottom: 20px;
     text-align: justify;
 }
-#about-me .info-hobbies{
+.info-hobbies{
     display: flex;
 }
-#about-me .info-hobbies h2{
+.info-hobbies h2{
     color: #1CB698;
     font-weight: bolder;
     margin-bottom: 15px;
 }
-#about-me .personal-info{
+.personal-info{
     width: 50%;
 }
-#about-me .personal-info li{
+.personal-info li{
     width: 100%;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
 }
-#about-me .personal-info li p span{
+.personal-info li p span{
     padding: 0 15px 0 0;
     border-bottom: 2px solid #1CB698;
 }
-#about-me .hobbies{
+.hobbies{
     width: 60%;
 }
-#about-me .hobbies h2{
+.hobbies h2{
     text-align: center;
 }
-
-#about-me .hobbies .caja-hobbies{
+.hobbies .caja-hobbies{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(75px,1fr));
     gap: 50px;
 }
-#about-me .hobbies .icon-hobbie{
+.hobbies .icon-hobbie{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100px;
     gap: 15px;
 }
-#about-me .hobbies i{
+.hobbies i{
     font-size: 40px;
 }
 
+/* Seccion Skills -------------------- */
+.soft-skills ul{
+    list-style-type: disc;
+    column-count: 2;
+}
+.soft-skills ul li{
+    margin-bottom: 10px;
+}
+#skills h2{
+    margin-bottom: 30px;
+}
+.hard-skills, .soft-skills{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.skills-columna{
+    width: 50%;
+}
+.skill{
+    margin-bottom: 25px;
+}
+.skill-name{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.skill-name i{
+    font-size: 13px;
+}
+.progress{
+    height: 10px;
+    width: 100%;
+    background: #fff;
+    border-radius: 75px 75px;
+}
+.progress-bar{
+    height: 100%;
+    width: 100%;
+    background-color: #1CB698;
+    border-radius: 75px 75px;
+}
 
 /* Parte Responsive -------------------- */
 @media (width <= 767px){
@@ -354,8 +392,8 @@ section .content-section{
     }
     #header.header-top h1{
         font-size: 20px;
-        margin-top: 10px;
         visibility: hidden;
+        margin: 0;
         transition: 0s;
     }
     #header.header-top h1::before{
@@ -368,35 +406,47 @@ section .content-section{
     section.section-show{
         top: 90px;
     }
+    section .content-section{
+        width: 80%;
+    }
     .menu ul{
         display: none;
     }
-    #about-me .info-hobbies{
+    .info-hobbies{
         display: block;
     }
-    #about-me .personal-info{
+    .personal-info{
         width: 100%;
         min-width: 100%;
     }
-    #about-me .hobbies{
+    .hobbies{
         margin-top: 30px;
     }
-    #about-me .info-hobbies h2{
+    .info-hobbies h2{
         text-align: center;
     }
-    #about-me .personal-info li{
+    .personal-info li{
         display: block;
         margin-bottom: 13px;
     }
-    #about-me .personal-info li p{
+    .personal-info li p{
         margin-bottom: 8px;
     } 
-    #about-me .hobbies{
+    .hobbies{
         width: 100%;
     }
-    #about-me .hobbies .caja-hobbies{
+    .hobbies .caja-hobbies{
         gap: 40px;
         margin-top: 30px;
+    }
+    .soft-skills ul{
+        column-count: 1;
+    }
+    .hard-skills, .soft-skills{
+        display: block;
+    }    
+    .skills-columna{
+        width: 100%;
     }
     
 }
@@ -416,18 +466,21 @@ section .content-section{
     #header .icon-menu{
         display: none;
     }
-    #about-me .personal-info{
+    section .content-section{
+        width: 85%;
+    }
+    .personal-info{
         width: 60%;
         min-width: 60%;
     }
-    #about-me .personal-info li{
+    .personal-info li{
         display: block;
         margin-bottom: 13px;
     }
-    #about-me .personal-info li p{
+    .personal-info li p{
         margin-bottom: 8px;
     } 
-    #about-me .hobbies{
+    .hobbies{
         width: 40;
     }
 
