@@ -66,7 +66,7 @@
 
     <main>
         <!-- SECCION SOBRE MI -->
-        <section id="about-me" class="section section-show">
+        <section id="about-me" class="section">
             <div class="content-section">
                 <h1><span>Sobre Mí</span></h1>
                 <p><span>Hola, me llamo Antonio.</span> Soy recién egresado en ingeniería en computación, actualmente me encuentro en proceso de titulación. Soy una persona curiosa y apasionada por su carrera que le encanta aprender nuevas cosas, además me gusta implicarme mucho en mi trabajo para poder realizar bien las cosas. Mi formación como ingeniero fue en el Centro Universitario UAEM Zumpango en donde adquirí habilidades como programador en distintos lenguajes, así como también la documentación de código.</p>
@@ -233,81 +233,79 @@
         </section>
 
         <!-- SECCION TECHNOLOGY -->
-        <section id="technology" class="section">
+        <section id="technology" class="section section-show">
             <div class="content-section">
                 <h1><span>Tecnologías</span></h1>
                 <h2>Las siguientes son algunas de las tecnologías con las que mas he trabajado y lo que he hecho con ellas.</h2>
-                <div class="carousel">
-                    <div class="box-carousel">
-                        <button aria-label="Anterior" class="carousel-prev">
-                            <i class="fas fa-chevron-left" ></i>
-                        </button>
-                        <div class="carousel-lista">
-                            <div class="carousel-elemento">
-                                <div class="caja-icon"><i class="fa-brands fa-java"></i></div>
-                                <h3>Java</h3>
-                                <p>He trabajado con hilos, sockets, interfaces gráficas con la clase swing. Los trabajos que he hecho con este lenguaje han sido la implementación de algoritmos genéticos, algunos algoritmos de clasificación como KNN y K-Means, así como también desarrollar un analizador léxico sintáctico capaz de leer código en lenguaje Python.</p>
-                            </div>
-                            <div class="carousel-elemento">
-                                <div class="caja-icon"><i class="fa-brands fa-python"></i></div>
-                                <h3>Python</h3>
-                                <p>Con Python trabaje el tratamiento en imágenes digitales desarrollando los métodos para poder comprender mejor como funcionaban técnicas de procesamiento digital. También vi con este lenguaje principios de Graficación como por ejemplo, curvas de Bézier y transformaciones de figuras. También desarrollé algoritmos genéticos e hice uso de redes neuronales para la implementación de un traductor de lenguaje de señas en tiempo real.</p>
-                            </div>
-                            <div class="carousel-elemento">
-                                <div class="caja-icon"><i class="fa-solid fa-database"></i></div>
-                                <h3>MySQL</h3>
-                                <p>La gestión de bases de datos la llevé a cabo con SQL con ayuda del gestor MySQL, con este lenguaje aprendí a manipular las tablas de las bases de datos, así como también, desarrollar funciones vistas y procedimientos para las propias bases de datos.</p>
-                            </div>
-                            <div class="carousel-elemento">
-                                <div class="caja-icon"><i class="fa-brands fa-linux"></i></div>
-                                <h3>Linux</h3>
-                                <p>Siendo Debian, Kali y principalmente Ubuntu las distribuciones con las que trabaje, dentro de ellas programe scripts con Bash, realice la creación y gestión de usuarios, así como también de claves públicas y privadas, realizando de la mano igual con la gestión de permisos.</p>
-                            </div>
-                            <div class="carousel-elemento">
-                                <div class="caja-icon"><i class="fa-brands fa-github"></i></div>
-                                <h3>GitHub</h3>
-                                <p>Para facilitar la organización de proyectos y permitir la colaboración en tiempo real cuando trabajaba en equipo use GitHub para crear repositorios de código y guardarlos en la nube de forma segura, usando el sistema de control de versiones.</p>
-                            </div>
-                            <div class="carousel-elemento">
-                                <div class="caja-icon"><i class="fa-solid fa-code"></i></div>
-                                <h3>Arduino</h3>
-                                <p>Con Arduino desarrolle un robot mini sumo como proyecto final de robótica, al igual que también fabrique un carro a control remoto que era conducido desde del celular cuya interfaz fue desarrollada con el software de App Inventor.</p>
-                            </div>
-                            <div class="carousel-elemento">
-                                <div class="caja-icon"><i class="fa-brands fa-trello"></i></div>
-                                <h3>Trello</h3>
-                                <p>Trello lo use para poder gestionar mis proyectos en equipo y flujos de trabajo, así como supervisar las tareas.</p>
-                            </div>
-                            <div class="carousel-elemento">
-                                <div class="caja-icon"><i class="fa-brands fa-jira"></i></div>
-                                <h3>Jira</h3>
-                                <p>También llegue a trabajar con Jira para la gestión de trabajo en equipo y así poder organizar y hacer un seguimiento de nuestro trabajo.</p>
-                            </div>
-                            <div class="carousel-elemento">
-                                <div class="caja-icon">
-                                    <i class="fa-brands fa-html5"></i>
-                                    <i class="fa-brands fa-css3-alt"></i>
-                                </div>
-                                <h3>HTML/CSS</h3>
-                                <p>He desarrollado páginas web sencillas para algunos de mis proyectos que involucraban una base de datos, tal es el caso de una página de login que conecte con una base de datos y le agregue el manejo de sesiones con PHP. Aun sigo en aprendizaje para poder trabajar de mejor manera con este lenguaje de marcado.</p>
-                            </div>
-                            <div class="carousel-elemento">
-                                <div class="caja-icon"><i class="fa-brands fa-figma"></i></div>
-                                <h3>Figma</h3>
-                                <p>Durante mi curso de desarrollo móvil en Android, aprendí las bases de diseño de interfaz para poder realizar moodboards de proyectos, así como los wireframes. También tengo noción sobre los diferentes perfiles de UI y como participan con el UX.</p>
-                            </div>
-                            <div class="carousel-elemento">
-                                <div class="caja-icon"><i class="fa-solid fa-code"></i></div>
-                                <h3>MPLAB IDE</h3>
-                                <p>Con MPLAB trabaje la programación de los PIC 16F84 y 16f887 diseñando algunos programas simples, como lo es encender una serie de LEDS formando recorridos, diseñar un contador con displays o el diseño de un letrero movil en una pantalla LCD.</p>
-                            </div>
+                <div class="glider-contain">
+                    <div class="glider">
+                        <div class="glider-elemento">
+                            <div class="caja-icon"><i class="fa-brands fa-java"></i></div>
+                            <h3>Java</h3>
+                            <p>He trabajado con hilos, sockets, interfaces gráficas con la clase swing. Los trabajos que he hecho con este lenguaje han sido la implementación de algoritmos genéticos, algunos algoritmos de clasificación como KNN y K-Means, así como también desarrollar un analizador léxico sintáctico capaz de leer código en lenguaje Python.</p>
                         </div>
-    
-                        <button aria-label="Anterior" class="carousel-next">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
+                        <div class="glider-elemento">
+                            <div class="caja-icon"><i class="fa-brands fa-python"></i></div>
+                            <h3>Python</h3>
+                            <p>Con Python trabaje el tratamiento en imágenes digitales desarrollando los métodos para poder comprender mejor como funcionaban técnicas de procesamiento digital. También vi con este lenguaje principios de Graficación como por ejemplo, curvas de Bézier y transformaciones de figuras. También desarrollé algoritmos genéticos e hice uso de redes neuronales para la implementación de un traductor de lenguaje de señas en tiempo real.</p>
+                        </div>
+                        <div class="glider-elemento">
+                            <div class="caja-icon"><i class="fa-solid fa-database"></i></div>
+                            <h3>MySQL</h3>
+                            <p>La gestión de bases de datos la llevé a cabo con SQL con ayuda del gestor MySQL, con este lenguaje aprendí a manipular las tablas de las bases de datos, así como también, desarrollar funciones vistas y procedimientos para las propias bases de datos.</p>
+                        </div>
+                        <div class="glider-elemento">
+                            <div class="caja-icon"><i class="fa-brands fa-linux"></i></div>
+                            <h3>Linux</h3>
+                            <p>Siendo Debian, Kali y principalmente Ubuntu las distribuciones con las que trabaje, dentro de ellas programe scripts con Bash, realice la creación y gestión de usuarios, así como también de claves públicas y privadas, realizando de la mano igual con la gestión de permisos.</p>
+                        </div>
+                        <div class="glider-elemento">
+                            <div class="caja-icon"><i class="fa-brands fa-github"></i></div>
+                            <h3>GitHub</h3>
+                            <p>Para facilitar la organización de proyectos y permitir la colaboración en tiempo real cuando trabajaba en equipo use GitHub para crear repositorios de código y guardarlos en la nube de forma segura, usando el sistema de control de versiones.</p>
+                        </div>
+                        <div class="glider-elemento">
+                            <div class="caja-icon"><i class="fa-solid fa-code"></i></div>
+                            <h3>Arduino</h3>
+                            <p>Con Arduino desarrolle un robot mini sumo como proyecto final de robótica, al igual que también fabrique un carro a control remoto que era conducido desde del celular cuya interfaz fue desarrollada con el software de App Inventor.</p>
+                        </div>
+                        <div class="glider-elemento">
+                            <div class="caja-icon"><i class="fa-brands fa-trello"></i></div>
+                            <h3>Trello</h3>
+                            <p>Trello lo use para poder gestionar mis proyectos en equipo y flujos de trabajo, así como supervisar las tareas.</p>
+                        </div>
+                        <div class="glider-elemento">
+                            <div class="caja-icon"><i class="fa-brands fa-jira"></i></div>
+                            <h3>Jira</h3>
+                            <p>También llegue a trabajar con Jira para la gestión de trabajo en equipo y así poder organizar y hacer un seguimiento de nuestro trabajo.</p>
+                        </div>
+                        <div class="glider-elemento">
+                            <div class="caja-icon">
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </div>
+                            <h3>HTML/CSS</h3>
+                            <p>He desarrollado páginas web sencillas para algunos de mis proyectos que involucraban una base de datos, tal es el caso de una página de login que conecte con una base de datos y le agregue el manejo de sesiones con PHP. Aun sigo en aprendizaje para poder trabajar de mejor manera con este lenguaje de marcado.</p>
+                        </div>
+                        <div class="glider-elemento">
+                            <div class="caja-icon"><i class="fa-brands fa-figma"></i></div>
+                            <h3>Figma</h3>
+                            <p>Durante mi curso de desarrollo móvil en Android, aprendí las bases de diseño de interfaz para poder realizar moodboards de proyectos, así como los wireframes. También tengo noción sobre los diferentes perfiles de UI y como participan con el UX.</p>
+                        </div>
+                        <div class="glider-elemento">
+                            <div class="caja-icon"><i class="fa-solid fa-code"></i></div>
+                            <h3>MPLAB IDE</h3>
+                            <p>Con MPLAB trabaje la programación de los PIC 16F84 y 16f887 diseñando algunos programas simples, como lo es encender una serie de LEDS formando recorridos, diseñar un contador con displays o el diseño de un letrero movil en una pantalla LCD.</p>
+                        </div>
                     </div>
-                    <div role="tablist" class="carousel-indicadores"></div>
+
+                    <button aria-label="Anterior" class="prev">
+                        <i class="fas fa-chevron-left" ></i>
+                    </button>
+                    <button aria-label="Anterior" class="next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div role="tablist" class="dots"></div>
                 </div>
             </div>
             

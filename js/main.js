@@ -1,12 +1,12 @@
 window.addEventListener('load', function(){
-  new Glider(document.querySelector('.carousel-lista'), {
+  new Glider(document.querySelector('.glider'), {
     slidesToShow: 1,
     slidesToScroll: 1,
     rewind: true,
-    dots: '.carousel-indicadores',
+    dots: '.dots',
     arrows: {
-      prev: '.carousel-prev',
-      next: '.carousel-next'
+      prev: '.prev',
+      next: '.next'
     },
     responsive: [{
       // screens greater than >=768px

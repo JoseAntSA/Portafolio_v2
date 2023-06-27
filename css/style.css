@@ -408,24 +408,48 @@ section .content-section h2{
 }
 
 /* Seccion Tecnologias -------------------- */
-.carousel{
-    margin: 0 auto;
+.box-glider{
+    position: relative;
 }
-.box-carousel{
-    display: flex;
-    align-items: center;
+.prev, .next{
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    opacity: 50%;
+    position: absolute;
+    top: calc(50% - 25px);
+    display: block;
 }
-.carousel-elemento{
+.prev{
+    left: -20px;
+}
+.next{
+    right: -20px;
+}
+.prev:hover, .next:hover{
+    opacity: 100%;
+}
+.dots .glider-dot{
+    opacity: .3;
+}
+.dots .glider-dot:hover{
+    opacity: 1;
+}
+
+
+
+.glider-elemento{
     text-align: center;
     background: rgba(255,255,255,.06);
     margin: 0 12px;
-    transition: all 0.3s;
 }
-.carousel-elemento:hover{
-    background: rgba(0,0,0,0.3);
-    
+.glider-elemento:hover{
+    background: rgba(0,0,0,0.3);   
 }
-.carousel-elemento .caja-icon{
+.glider-elemento .caja-icon{
     margin: 30px auto;
     margin-bottom: 20px;
     width: 64px;
@@ -433,42 +457,24 @@ section .content-section h2{
     background: #1CB698;
     border-radius: 5px;
     display: flex;
-    gap: 5px;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     box-shadow: -9px -8px 0px 0px  rgba(255,255,255,0.15);
 }
-.carousel-elemento i{
+.glider-elemento i{
     font-size: 30px;
 }
-.carousel-elemento h3{
+.glider-elemento h3{
     font-size: 20px;
 }
-.carousel-elemento p{
+.glider-elemento p{
     box-sizing: border-box;
     padding: 0 20px 20px 20px;
     margin-top: 20px;
     text-align: justify;
     line-height: 19px;
     font-size: 14px;
-}
-.carousel-prev, .carousel-next{
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    border: none;
-    cursor: pointer;
-    background: none;
-    opacity: 50%;
-}
-.carousel-prev:hover, .carousel-next:hover{
-    opacity: 100%;
-}
-.carousel-indicadores .glider-dot{
-    opacity: .3;
-}
-.carousel-indicadores .glider-dot:hover{
-    opacity: 1;
 }
 
 /* Seccion Portafolio -------------------- */
