@@ -78,6 +78,10 @@ body::before {
     border-bottom: 2px solid #1CB698;
     padding-bottom: 2px;
 }
+#header .fa-arrow-up-right-from-square{
+    margin-left: 10px;
+    margin-bottom: 3px;
+}
 
 /* Header Top -------------------- */
 #header.header-top .photo-me, #header.header-top .redes, .header-top h2{
@@ -119,18 +123,19 @@ body::before {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     margin-top: 40px;
 }
 .menu a, .menu a:focus {
     text-decoration: none;
     font-family: "Poppins", sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.6);
     padding-bottom: 3px;
     transition: all;
 }
+
 .menu a:hover{
     border-bottom: 2px solid #1CB698;
 }
@@ -176,7 +181,7 @@ body::before {
     transition: 0.3s;
 }
 #header .menu-mobile li{
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 
 /* Vinculos de Redes -------------------- */
@@ -288,7 +293,7 @@ section .content-section h2{
 }
 
 /* Seccion Sobre Mi -------------------- */
-#about-me .content-section > span{
+#about-me .content-section > p span{
     color: #1CB698;
 }
 #about-me .content-section > p{
@@ -314,6 +319,17 @@ section .content-section h2{
 .personal-info li p span{
     padding: 0 15px 0 0;
     border-bottom: 2px solid #1CB698;
+}
+
+.personal-info li a{
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+#about-me .fa-arrow-up-right-from-square{
+    margin-left: 10px;
+    margin-bottom: 2px;
 }
 .hobbies{
     width: 60%;
@@ -492,9 +508,6 @@ section .content-section h2{
     position: relative;
     height: fit-content;
 }
-.project img{
-    width: 100%;
-}
 .project-info{
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
@@ -510,6 +523,13 @@ section .content-section h2{
     z-index: 2; 
     opacity: 0;
     transition: all ease-in-out 0.4s;;
+}
+.project img{
+    width: 100%;
+}
+.project h3:last-child{
+    color: #1CB698;
+    margin-top: 20px;
 }
 .project-info:hover{
     opacity: 1; 
@@ -593,6 +613,9 @@ section .content-section h2{
     .menu ul{
         display: none;
         margin-top: 0;
+    }
+    main p, main li{
+        font-size: 14px;
     }
     section{
         top: 110px;
