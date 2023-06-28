@@ -40,6 +40,7 @@
                     <li><a class="menu-link" href="#education" onclick="funcionesLink()">Formaciones</a></li>
                     <li><a class="menu-link" href="#technology" onclick="funcionesLink()">Tecnologías</a></li>
                     <li><a class="menu-link" href="#portfolio" onclick="funcionesLink()">Portafolio</a></li>
+                    <li><a class="menu-link" href="#contact" onclick="funcionesLink()">Contacto</a></li>
                     <li><a class="menu-link" href="https://drive.google.com/file/d/1gCn5IMpM0TdzWLaS63mlZMvYcmPtYHNE/view?usp=share_link">CV<i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
                   </ul>
                 </nav>
@@ -312,79 +313,108 @@
         <section id="portfolio" class="section">
             <div class="content-section">
                 <h1><span>Portafolio</span></h1>
-                <h2>Estos son algunos proyectos en los que he trabajado. Para más información de ellos puede visitar mi <a href="https://github.com/JoseAntSA">GitHub</a>.</h2>
+                <h2>Estos son algunos proyectos en los que he trabajado. Para más información de ellos puede visitar mi <a href="https://github.com/JoseAntSA">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>.</h2>
                 <div class="galery">
                     <div class="project">
-                        <img src="img/portfolio/AG_Imagen_GIF.gif" alt="">
+                        <img src="img/portfolio/AG_Imagen_GIF.gif" alt="Imagen de proyecto">
                         <div class="project-info">
                             <h3>Reconstrucción de imagen</h3>
                             <h3>Python</h3>
                         </div>
                     </div>
                     <div class="project">
-                        <img src="img/portfolio/TratImg_GIF.gif" alt="">
+                        <img src="img/portfolio/TratImg_GIF.gif" alt="Imagen de proyecto">
                         <div class="project-info">
                             <h3>Tratamiento de imágenes digitales</h3>
                             <h3>Python</h3>
                         </div>
                     </div>
                     <div class="project">
-                        <img src="img/portfolio/KMeans_GIF.gif" alt="">
+                        <img src="img/portfolio/KMeans_GIF.gif" alt="Imagen de proyecto">
                         <div class="project-info">
                             <h3>Clasificador K-Means</h3>
                             <h3>Java</h3>
                         </div>
                     </div>
                     <div class="project">
-                        <img src="img/portfolio/8Reinas_GIF_2.gif" alt="">
+                        <img src="img/portfolio/8Reinas_GIF_2.gif" alt="Imagen de proyecto">
                         <div class="project-info">
                             <h3>Problema de las ocho reinas</h3>
                             <h3>Java</h3>
                         </div>
                     </div>
                     <div class="project">
-                        <img src="img/portfolio/Encriptador.png" alt="">
+                        <img src="img/portfolio/Encriptador.png" alt="Imagen de proyecto">
                         <div class="project-info">
                             <h3>Encriptador</h3>
                             <h3>JS-HTML-CSS</h3>
                         </div>
                     </div>
                     <div class="project">
-                        <img src="img/portfolio/AG_MaxCaja_3.png" alt="">
+                        <img src="img/portfolio/AG_MaxCaja_3.png" alt="Imagen de proyecto">
                         <div class="project-info">
                             <h3>Maximización de cajas</h3>
                             <h3>Python</h3>
                         </div>
                     </div>
                     <div class="project">
-                        <img src="img/portfolio/RecPatron_GIF_4.gif" alt="">
+                        <img src="img/portfolio/RecPatron_GIF_4.gif" alt="Imagen de proyecto">
                         <div class="project-info">
                             <h3>Reconocimiento de patrones</h3>
                             <h3>Java</h3>
                         </div>
                     </div>
                     <div class="project">
-                        <img src="img/portfolio/Analizador_3.png" alt="">
+                        <img src="img/portfolio/Analizador_3.png" alt="Imagen de proyecto">
                         <div class="project-info">
                             <h3>Analizador Léxico-Sintáctico</h3>
                             <h3>Java</h3>
                         </div>
                     </div>
                     <div class="project">
-                        <img src="img/portfolio/AG_Palabras_3.png" alt="">
+                        <img src="img/portfolio/AG_Palabras_3.png" alt="Imagen de proyecto">
                         <div class="project-info">
                             <h3>AG de búsqueda de frases</h3>
                             <h3>Java</h3>
                         </div>
                     </div>
                     <div class="project">
-                        <img src="img/portfolio/Virus_GIF.gif" alt="">
+                        <img src="img/portfolio/Virus_GIF.gif" alt="Imagen de proyecto">
                         <div class="project-info">
                             <h3>Virus</h3>
                             <h3>Java</h3>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <!-- SECCION CONTACT -->
+        <section id="contact" class="section">
+            <div class="content-section">
+                <h1><span>Contacto</span></h1>
+                <h2>¿Quieres contactarme?, Completa el siguiente formulario y me pondre en contacto lo antes posible.</h2>
+                <div class="contact-box">
+                    <div class="contact-element">
+                        <input type="text" id="contact-name" class="contact-name" placeholder=".">
+                        <label>Nombre</label>
+                    </div>
+                    <div class="contact-element">
+                        <input type="email" id="contact-email" class="contact-email" placeholder=".">
+                        <label>Email</label>
+                    </div>
+                    <div class="contact-element">
+                        <input type="text" id="contact-topic" class="contact-topic" placeholder=".">
+                        <label>Tema</label>
+                    </div>
+                    <div class="contact-element">
+                        <textarea id="contact-message" class="contact-message" name="mensaje" placeholder="."></textarea>
+                        <label>Mensaje</label>
+                    </div>
+                    <div class="contact-icon">
+                        <img src="img/contact.png" alt="Imagen de contacto">
+                    </div>
+                </div>
+                <button id="ct btn-send" class="btn-send" >Enviar</button>
             </div>
         </section>
     </main>
