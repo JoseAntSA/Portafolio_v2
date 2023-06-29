@@ -82,9 +82,17 @@ body::before {
     margin-left: 10px;
     margin-bottom: 3px;
 }
-
+#header .copyright{
+    width: 300px;
+    height: 40px;
+    position: absolute;
+    top: calc(100vh - 50px);
+    left: calc(50vw - 150px);
+    font-size: 13;
+    text-align: center;
+}
 /* Header Top -------------------- */
-#header.header-top .photo-me, #header.header-top .redes, .header-top h2{
+#header.header-top .photo-me, #header.header-top .redes, .header-top h2, #header.header-top .copyright{
     display: none;
 }
 #header.header-top{

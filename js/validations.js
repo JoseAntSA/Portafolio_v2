@@ -59,3 +59,10 @@ export function validateButton(inputs, button){
   else
     button.classList.remove("btn-disabled");
 }
+
+export function sendInfo(inputs){
+  inputs.forEach((input) =>{
+    input.value = "";
+  });
+  alert("Mensaje enviado");
+}
