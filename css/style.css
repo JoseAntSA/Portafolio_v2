@@ -34,7 +34,7 @@ body::before {
     z-index: 1;
 }
 #header .box-header{
-    width: 70%;
+    width: 80%;
 }
 #header .photo-me{
     display: flex;
@@ -129,7 +129,7 @@ body::before {
 .menu a, .menu a:focus {
     text-decoration: none;
     font-family: "Poppins", sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.6);
     padding-bottom: 3px;
@@ -580,22 +580,21 @@ section .content-section h2{
 .contact-box{
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 25px 25px 25px 120px;
     column-gap: 30px;
-    row-gap: 30px;
-}
-.contact-element{
-    grid-column: 1/2;
-    position: relative;
 }
 ::placeholder {
     color: transparent;
 }
-input, textarea{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
+.input-element{
+    position: relative;
+}
+input{
+    height: 30px;
+}
+textarea{
+    height: 120px;
+}
+.input{
     width: calc(100% - 20px);
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid #fff;
@@ -607,40 +606,49 @@ input, textarea{
     outline: none;
     z-index: 1;
 }
+.input{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
 textarea{
     padding: 5px 10px;
 }
 label{
     position: absolute;
-    top: 5px;
+    top: 28px;
     left: 15px;
     color: rgba(255, 255, 255, 0.5);
     transition: 0.5s;
     z-index: 0;
 }
-input:focus + label, textarea:focus + label, 
-input:not(:placeholder-shown)+ label, textarea:not(:placeholder-shown)+ label {
-    top: -17px;
+.input:focus + label, .input:not(:placeholder-shown)+ label{
+    top: 3px;
     left: 10px;
     z-index: 10;
     font-size: 14px;
     color: #fff;
 }
-.content-section input:focus, .content-section textarea:focus{
+.input:focus{
     border: 2px solid #fff;
 }
+.input-message-error{
+    color: #F14336;
+    padding-left: 15px;
+    display: none;
+}
+.input-container--invalid .input-message-error{
+    display: block;
+}
 .contact-icon{
-    grid-column: 2/3;
-    grid-row: 1/5;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .contact-icon img{
-    height: 100%;
+    height: 80%;;
 }
 .btn-send{
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 10px 30px;
     border: none;
     background-color: rgba(28, 182, 152, .5);
@@ -650,6 +658,14 @@ input:not(:placeholder-shown)+ label, textarea:not(:placeholder-shown)+ label {
     cursor: pointer;
     font-size: 16px;
     transition: all ease-in-out 0.5s;
+}
+form .btn-disabled{
+    background-color: rgba(28, 182, 152, .2);
+    cursor: default;
+} 
+form .btn-disabled:hover{
+    background-color: rgba(28, 182, 152, .2);
+    transform: none;
 } 
 .btn-send:hover{
     background-color: rgba(28, 182, 152, .8);
@@ -825,11 +841,10 @@ input:not(:placeholder-shown)+ label, textarea:not(:placeholder-shown)+ label {
         margin-bottom: 20px;
     }
     .contact-box{
-        grid-template-columns: 60% 30%;
+        grid-template-columns: 100%;
     }
-    .contact-icon img{
-        width: 100%;
-        height: auto;
+    .contact-icon{
+        display: none;
     }
 }
 @media (1024px <= width) {  

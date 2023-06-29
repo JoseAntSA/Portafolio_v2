@@ -394,33 +394,43 @@
                 <h1><span>Contacto</span></h1>
                 <h2>¿Quieres contactarme?, Completa el siguiente formulario y me pondre en contacto lo antes posible.</h2>
                 <div class="contact-box">
-                    <div class="contact-element">
-                        <input type="text" id="contact-name" class="contact-name" placeholder=".">
-                        <label>Nombre</label>
-                    </div>
-                    <div class="contact-element">
-                        <input type="email" id="contact-email" class="contact-email" placeholder=".">
-                        <label>Email</label>
-                    </div>
-                    <div class="contact-element">
-                        <input type="text" id="contact-topic" class="contact-topic" placeholder=".">
-                        <label>Tema</label>
-                    </div>
-                    <div class="contact-element">
-                        <textarea id="contact-message" class="contact-message" name="mensaje" placeholder="."></textarea>
-                        <label>Mensaje</label>
-                    </div>
+                    <form action="/php/send_email.php" method="POST">
+                        <fieldset>
+                            <div class="input-element">
+                                <input type="text" id="name" name="name" class="input" placeholder="." autocomplete="off" required data-tipo="name" pattern="^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$" maxlength="50">
+                                <label>Nombre</label>
+                                <span class="input-message-error">Este campo no es valido</span>
+                            </div>
+                            <div class="input-element">
+                                <input type="email" id="email" name="email" class="input" placeholder="." autocomplete="off" required data-tipo="email" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$">
+                                <label>Email</label>
+                                <span class="input-message-error">Este campo no es valido</span>
+                            </div>
+                            <div class="input-element">
+                                <input type="text" id="topic" name="topic" class="input" placeholder="." required data-tipo="topic" maxlength="50">
+                                <label>Tema</label>
+                                <span class="input-message-error">Este campo no es valido</span>
+                            </div>
+                            <div class="input-element">
+                                <textarea id="message" name="message" class="input" placeholder="." required data-tipo="message" maxlength="300"></textarea>
+                                <label>Mensaje</label>
+                                <span class="input-message-error">Este campo no es valido</span>
+                            </div>
+                        </fieldset>
+                        <button id="btn-send" class="btn-send btn-disabled" disabled>Enviar</button>
+                    </form>
                     <div class="contact-icon">
                         <img src="img/contact.png" alt="Imagen de contacto">
                     </div>
                 </div>
-                <button id="ct btn-send" class="btn-send" >Enviar</button>
+                
             </div>
         </section>
     </main>
 
     <script src="js/main.js"></script>
     <script src="js/glider.min.js"></script>
+    <script src="js/app.js" type="module"></script>
     
 </body>
 </html>
