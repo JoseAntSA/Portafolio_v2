@@ -82,17 +82,9 @@ body::before {
     margin-left: 10px;
     margin-bottom: 3px;
 }
-#header .copyright{
-    width: 300px;
-    height: 40px;
-    position: absolute;
-    top: calc(100vh - 50px);
-    left: calc(50vw - 150px);
-    font-size: 13;
-    text-align: center;
-}
+
 /* Header Top -------------------- */
-#header.header-top .photo-me, #header.header-top .redes, .header-top h2, #header.header-top .copyright{
+#header.header-top .photo-me, #header.header-top .redes, .header-top h2{
     display: none;
 }
 #header.header-top{
@@ -678,6 +670,21 @@ form .btn-disabled:hover{
 .btn-send:hover{
     background-color: rgba(28, 182, 152, .8);
     transform: translateY(-3px);
+}
+
+/* Footer -------------------- */
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.copyright{
+    width: 300px;
+    height: 40px;
+    font-size: 13;
+    font-weight: bolder;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
 }
 
 /* Parte Responsive -------------------- */
