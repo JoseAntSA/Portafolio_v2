@@ -27,7 +27,6 @@ window.addEventListener('load', function(){
 });
 
 window.onload = function() {
-  clickIconMenu();
   enableLink(); 
 }
 
@@ -35,16 +34,11 @@ function showMenu(){
   let menu = document.getElementById("menu");
   menu.classList.toggle("menu-mobile");  
 
-  let iconMenu = document.getElementById("icon-menu-movil");
+  let iconMenu = document.getElementById("icon-movil");
   iconMenu.classList.toggle("fa-bars");
   iconMenu.classList.toggle("fa-xmark");
 }
 
-function clickIconMenu(){
-  document.getElementById("icon-menu-movil").addEventListener( 'click',  e =>{
-    showMenu();  
-  });
-}
 
 function enableLink(){
   let menu = document.getElementById("menu");
@@ -58,12 +52,10 @@ function enableLink(){
       let seccion = e.target.getAttribute("href");
       if(seccion == "#header"){
         document.getElementById("header").classList.remove("header-top");
-       // document.querySelector("main").classList.remove("main-show");
       }
       else{
         document.getElementById("header").classList.add("header-top");
         document.querySelector(seccion).classList.add("section-show");
-        //document.querySelector("main").classList.add("main-show");
       }
     });
   });
