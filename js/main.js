@@ -41,7 +41,7 @@ function showMenu(){
 }
 
 function clickIconMenu(){
-  document.getElementById("icon-menu").addEventListener( 'click',  e =>{
+  document.getElementById("icon-menu-movil").addEventListener( 'click',  e =>{
     showMenu();  
   });
 }

@@ -147,16 +147,15 @@ body::before {
 }
 
 /* Navegacion Movil -------------------- */
-.icon-menu i{
+#icon-menu-movil{
     color: #fff;
     font-size: 25px;
-}.icon-menu{
     cursor: pointer;
     position: fixed;
     right: 15px;
-    top: 15px;
+    top: 25px;
     line-height: 0;
-    z-index: 3;
+    z-index: 15;
 }
 #header .menu-mobile{
     position: fixed;
@@ -863,7 +862,7 @@ footer{
     }
 }
 @media (1024px <= width) {  
-    #header .icon-menu{
+    #header #icon-menu-movil{
         display: none;
     } 
 }
