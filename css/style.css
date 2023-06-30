@@ -153,9 +153,14 @@ body::before {
     cursor: pointer;
     position: fixed;
     right: 15px;
-    top: 25px;
+    top: 15px;
     line-height: 0;
     z-index: 15;
+    background: none;
+    border: none;
+}
+#icon-menu-movil::before{
+    display: none;
 }
 #header .menu-mobile{
     position: fixed;
