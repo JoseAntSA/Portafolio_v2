@@ -26,9 +26,6 @@ window.addEventListener('load', function(){
   });
 });
 
-window.onload = function() {
-  enableLink(); 
-}
 
 function showMenu(){
   let menu = document.getElementById("menu");
@@ -38,7 +35,6 @@ function showMenu(){
   iconMenu.classList.toggle("fa-bars");
   iconMenu.classList.toggle("fa-xmark");
 }
-
 
 function enableLink(){
   let menu = document.getElementById("menu");
@@ -62,8 +58,10 @@ function enableLink(){
 }
 
 function funcionesLink(){
+  enableLink();
   desableLink();
   ocultarSeccion();
+  
 }
 
 function desableLink(){
