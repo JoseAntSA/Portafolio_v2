@@ -353,45 +353,12 @@ section .content-section h2{
 .hobbies i{
     font-size: 40px;
 }
-
-/* Seccion Skills -------------------- */
 .soft-skills ul{
     list-style-type: disc;
     column-count: 2;
 }
 .soft-skills ul li{
     margin-bottom: 10px;
-}
-.hard-skills, .soft-skills{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-.skills-columna{
-    width: 50%;
-}
-.skill{
-    margin-bottom: 25px;
-}
-.skill-name{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-}
-.skill-name i{
-    font-size: 13px;
-}
-.progress{
-    height: 10px;
-    width: 100%;
-    background: #fff;
-    border-radius: 75px 75px;
-}
-.progress-bar{
-    height: 100%;
-    width: 100%;
-    background-color: #1CB698;
-    border-radius: 75px 75px;
 }
 
 /* Seccion Formaciones -------------------- */
