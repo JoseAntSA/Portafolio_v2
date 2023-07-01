@@ -26,55 +26,44 @@ window.addEventListener('load', function(){
   });
 });
 
+const menu = document.getElementById("menu");
+const listaMenu = menu.querySelectorAll("ul li a");
+const secciones = document.querySelectorAll("section");
+const iconMenu = document.getElementById("icon-movil");
 
 function showMenu(){
-  let menu = document.getElementById("menu");
-  menu.classList.toggle("menu-mobile");  
-
-  let iconMenu = document.getElementById("icon-movil");
+  menu.classList.toggle("menu-mobile");
   iconMenu.classList.toggle("fa-bars");
   iconMenu.classList.toggle("fa-xmark");
 }
 
-function enableLink(){
-  let menu = document.getElementById("menu");
-  let listaMenu = menu.querySelectorAll("ul li a"); 
-  listaMenu.forEach(el => {
-    el.addEventListener("click", e => {
-      e.target.classList.toggle("active");
-      if(menu.classList.contains("menu-mobile"))
-        showMenu();
-
-      let seccion = e.target.getAttribute("href");
-      if(seccion == "#header"){
-        document.getElementById("header").classList.remove("header-top");
-      }
-      else{
-        document.getElementById("header").classList.add("header-top");
-        document.querySelector(seccion).classList.add("section-show");
-      }
-    });
-  });
-}
-
-function funcionesLink(){
-  enableLink();
-  desableLink();
-  ocultarSeccion();
-  
-}
-
 function desableLink(){
-  let listaNav = document.getElementById("menu").querySelectorAll("ul li a");
-  listaNav.forEach(el => {
+  listaMenu.forEach(el => {
     el.classList.remove("active");
   }); 
 }
 
 function ocultarSeccion(){
-  let secciones = document.querySelectorAll("section");
   secciones.forEach(el => {
-    el.classList.remove('section-show');
-    
+    el.classList.remove('section-show');  
   });
 }
+
+listaMenu.forEach( opc => {
+  opc.addEventListener("click", el => {  
+    desableLink();
+    ocultarSeccion();
+    el.target.classList.add("active");
+    if(menu.classList.contains("menu-mobile"))
+      showMenu();
+
+    const seccion = el.target.getAttribute("href");
+    if(seccion == "#header"){
+      document.getElementById("header").classList.remove("header-top");
+    }
+    else{
+      document.getElementById("header").classList.add("header-top");
+      document.querySelector(seccion).classList.add("section-show");
+    }
+  });
+});
